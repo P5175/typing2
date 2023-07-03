@@ -1,0 +1,60 @@
+#paragraph{
+    display: flex;
+    width:100%;
+   flex-wrap: wrap;
+   margin:20px;
+   outline: none;
+}
+:host /deep/ #paragraph div{
+    font-size: 50px;
+    margin-right: 10px;
+   
+}
+:host /deep/.sucess{
+    color: greenyellow ;
+}
+:host /deep/.error{
+    color: tomato ;
+}
+#refresh{
+    text-align: center;
+    
+}
+#cursor{
+    position: absolute;
+    background-color: blue;
+    height: 38px;
+    width: 2px;
+    top:12px;
+    left:27px;
+    /* color: blue; */
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.result{
+    font-size: 30px;
+    color: rgb(158, 103, 20);
+}
+.resulta{
+    font-size: 20px;
+    color: rgb(48, 44, 44);
+}
+#result_main{
+   text-align: center;
+   visibility: hidden;
+}
+#timer{
+   font-size: 20px;
+  margin: 20px;
+ 
+}

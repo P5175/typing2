@@ -1,0 +1,28 @@
+input[type="radio"]{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  .v1 {
+    border-right: 1px solid black;
+    height: 10px;
+    margin-left: 10px;
+  }
+
+  input[type="radio"]:checked + label {
+    font-weight: bold;
+    color:rgb(158, 103, 20)
+}
+/* #modal{
+z-index: 0;
+position: absolute;
+top: 50px;
+left: 50px;
+opacity: 0;
+
+}
+#header{
+  z-index: -1;
+  opacity: 1;
+} */

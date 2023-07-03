@@ -1,0 +1,15 @@
+#header{
+    z-index: 1;
+    opacity: 1;
+}
+#typing{
+z-index: 1;
+opacity: 1;
+}
+#modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 1;
+}

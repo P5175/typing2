@@ -1,0 +1,23 @@
+<!-- <input type="text" id="input"> -->
+<div id="timer" #timerdiv *ngIf="type=='time'">{{ timer }}</div>
+<div id="timer" #timerdiv *ngIf="type=='word'">{{i}}/{{ wordcount }}</div>
+<div style="position: relative;">
+<!-- <appEvent id="paragraph" (keydown)="keydown($event)"  tabindex="5" #paragraph (onkeyup)="shiftup($event)" (onkeydown)="shiftdown($event)" (onmousemove)="onmousemove($event)"> -->
+    <appEvent id="paragraph" (keydown)="keydown($event)"  tabindex="5" #paragraph (onkeyup)="shiftup($event)" (onkeydown)="shiftdown($event)" >
+    </appEvent>
+<!-- </appEvent> -->
+<span id="cursor" #cursorelement></span>
+</div>
+<div id="refresh" class="refresh"><button style="font-size: 20px;" (click)="onclick()" #refresh>refresh</button></div>
+
+
+<div id="result_main" #result_main>
+    <span id="wpm" class="result">wpm</span>
+    <div id="wpma" class="resulta" *ngIf="const_timer!=0">{{((correctword*60)/const_timer)|number:'1.0-0'}}</div>
+    <!-- <div id="wpma" class="resulta" *ngIf="const_timer==0">{{(correctword*100/max_timer)|number:'1.0-0'}}</div> -->
+    <span id="accuracy"  class="result">accuracy</span>
+    <div id="accuracya"  class="resulta" *ngIf="correctword!=0 || incorrectword!=0">{{(correctword*100/(correctword+incorrectword))|number:'1.0-0'}}<span>%</span></div>
+    <div   id="accuracya"  class="resulta"  *ngIf="correctword==0 && incorrectword==0">0<span>%</span></div>
+
+    <button (click)="onclick2()">try again</button>
+</div>

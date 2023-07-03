@@ -1,0 +1,31 @@
+#modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    padding: 50px;
+    background-color: rgb(73, 77, 77);
+    margin-top: 10% ;
+}
+
+#modal_input input{
+    width: 300px;
+    font-size: 30px;
+    color:  rgb(158, 103, 20);
+}
+
+#modal_button button{
+width: 300px;
+font-size: 30px;
+color:  rgb(158, 103, 20);
+}
+
+#modal_input{
+    margin: 50px;
+}
+
+#modal_button{
+    margin: 50px;
+    
+} 

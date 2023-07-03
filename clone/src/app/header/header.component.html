@@ -1,0 +1,36 @@
+<div *ngIf="!headervisible" #ref>
+    <input type="radio" id="time" name="type" value="time" checked="checked" [(ngModel)]="selectedtype" (change)="change1($event)">
+    <label for="time">time</label>
+    <input type="radio" id="word" name="type" value="word" [(ngModel)]="selectedtype" (change)="change1($event)">
+    <label for="word">word</label>
+    <span class="v1"></span>
+    
+    <input type="radio" name="timevalue" id="time15" value=15 checked="checked" *ngIf="selectedtype=='time'" (change)="change($event)" >
+    <label for="time15" *ngIf="selectedtype=='time'">15</label>
+    <input type="radio" name="timevalue" id="time30" value=30 *ngIf="selectedtype=='time'"  (change)="change($event)" [(ngModel)]="timer">
+    <label for="time30" *ngIf="selectedtype=='time'">30</label>
+    <input type="radio" name="timevalue" id="time60" value=60 *ngIf="selectedtype=='time'"  (change)="change($event)" [(ngModel)]="timer">
+    <label for="time60" *ngIf="selectedtype=='time'">60</label>
+    <input type="radio" name="timevalue" id="time120" value=120 *ngIf="selectedtype=='time'"  (change)="change($event)" [(ngModel)]="timer">
+    <label for="time120" *ngIf="selectedtype=='time'">120</label>
+    <input type="radio" name="timevalue" id="timecustom" value=0 *ngIf="selectedtype=='time'"  (change)="change($event)" (click)="click($event)" [(ngModel)]="timer">
+    <label for="timecustom" *ngIf="selectedtype=='time'">custom</label>
+    <!-- <button type="button" style="margin-left: 5px;" *ngIf="selectedtype=='time'" (click)="change($event)">
+        Custom
+    </button> -->
+    
+    <input type="radio" name="wordvalue" id="word1" value=1 checked="checked" *ngIf="selectedtype=='word'" (change)="change($event)">
+    <label for="word1" *ngIf="selectedtype=='word'">1</label>
+    <input type="radio" name="wordvalue" id="word2" value=2 *ngIf="selectedtype=='word'" (change)="change($event)"  [(ngModel)]="word">
+    <label for="word2" *ngIf="selectedtype=='word'">2</label>
+    <input type="radio" name="wordvalue" id="word3" value=3 *ngIf="selectedtype=='word'" (change)="change($event)"  [(ngModel)]="word">
+    <label for="word3" *ngIf="selectedtype=='word'">3</label>
+    <input type="radio" name="wordvalue" id="word4" value=4 *ngIf="selectedtype=='word'" (change)="change($event)" [(ngModel)]="word">
+    <label for="word4" *ngIf="selectedtype=='word'">4</label>
+    <input type="radio" name="wordvalue" id="wordcustom" value=0 *ngIf="selectedtype=='word'" (change)="change($event)"  [(ngModel)]="word">
+    <label for="wordcustom" *ngIf="selectedtype=='word'">custom</label>
+    </div>
+    <!-- <div id="modal" #modal>
+     <input type="number">
+     <button>ok</button>
+    </div> -->
